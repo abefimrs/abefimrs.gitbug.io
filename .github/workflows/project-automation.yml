@@ -1,0 +1,41 @@
+name: Update GitHub Project on Push and Merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-project-on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the Commit Message
+        run: echo "Commit: ${{ github.event.head_commit.message }}"
+      
+      - name: Move Card to 'Push' Column
+        run: |
+          card_id=$(gh api \
+            -H "Accept: application/vnd.github.inertia-preview+json" \
+            /repos/${{ github.repository }}/projects/columns/cards \
+            | jq '.[] | select(.note | contains("${{ github.event.head_commit.message }}")).id')
+
+          if [ -z "$card_id" ]; then
+            echo "No project card found for this commit message."
+          else
+            gh api \
+              -X POST \
+              -H "Authorization: token ${{ secrets.GH_PAT }}" \
+              /projects/columns/COLUMN_ID/cards/$card_id/moves \
+              -f position=top
+          fi
+
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          
+    update-project-on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move Card to 'Push' Column on Push
+        run: |
+          card_id=$(gh api \
+            -H "Accept: application/rest/
