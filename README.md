@@ -1,4 +1,4 @@
-### Assignment Title: Collaborative Website Project Using Git and GitHub
+# Collaborative Website Project Using Git and GitHub
 ## Objective
 The objective of this assignment is to help students understand the basic concepts of Git, including repository creation, branching, committing, and pushing changes to a remote repository on GitHub. The students will also learn how to collaborate with others by cloning a repository, creating branches, and merging changes.
 
