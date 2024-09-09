@@ -5,12 +5,12 @@ Pages should be also in *.html extention.
 
 # To create a profile website
 ### step 1 
-  Go to settings page from user profile
+  #### Go to settings page from user profile
   ![Setting page](step1.png)
 ### Step 2
-  Select page from left menu
+  #### Select page from left menu
    ![Link to github pages](step2.png)
 ### Step 3
-  Set a repository and its branch to render/deploy the website. We now recomend main branch for practice.
+  #### Set a repository and its branch to render/deploy the website. We now recomend main branch for practice.
    ![How to set repo](step3.png)
   
