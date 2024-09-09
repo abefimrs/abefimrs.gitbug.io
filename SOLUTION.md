@@ -29,6 +29,12 @@ Navigate into the project directory:
 ```
 cd team-portfolio
 ```
+#### Sample website code in the link below
+````
+https://github.com/abefimrs/abefimrs.github.io/releases
+````
+Download the source if you want. After download unzip the source copy and past into the directory of your git folder. Than add all files and floder to git to work with.
+
 #### Create a Branch for Each Team Member:
 
 #### Create a new branch:
