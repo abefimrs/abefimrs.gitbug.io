@@ -33,6 +33,8 @@ Push Changes to GitHub:
 Create a Pull Request:
 
 6. Once all students have pushed their changes, they should open a pull request on GitHub to merge their branch into the main branch.
+7. 
+8. Student should make reviewer of their team members. Like member one should add reviewer member two as reviewer and vise versa.
 
 ### Team members should review each other's code before merging.
 
